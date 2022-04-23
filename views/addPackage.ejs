@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <title>Add Package</title>
+    
+</head>
+
+<body>
+    <%- include('admin/admininclude/_header')%>
+    <div>
+        <h1>
+            <center>Add Package</center>
+        </h1>
+        <hr>
+        <center>
+            <!-- <p>Kindly give us your valuable feedack.</p> -->
+        </center>
+    </div>
+    <form action="/addPackage_save" method="POST">
+    <center>
+        <div class="fb-box">
+            <br><br>
+            <label>Package Name :  </label><input type="text" id="package_name" name="package_name"><br><br>
+            <label>Package Price :  </label><input type="text" id="package_price" name="package_price"><br><br>
+            <label for="cars">Choose a Package Type : </label>
+
+<select name="package_type" id="package_type">
+  <option value="winterpackage">Winter Package</option>
+  <option value="summerpackage">Summer Package</option>
+</select>
+           <br><br>
+           <br>
+           <label>Package Description :  </label>
+            <textarea name="package_des" id="package_des" cols="25" rows="3" ></textarea><br><br>
+            <label>Package Image URL :  </label><input type="text" id="package_img" name="package_img"><br><br><br>
+        </div><br><br>
+        <button class="raise">Submit Package</button>
+    </center>
+    <br><br>
+    <%- include('admin/admininclude/_footer')%>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+npnpm init
+npm install
+npm install express
+npm install dotenv mongoose body-parser nodemon
+create .gitignore file in backend folder
+npm i express morgan nodemon ejs body-parser dotenv mongoose axios

@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <title>Add Gallary</title>
+    
+</head>
+
+<body>
+    <%- include('admin/admininclude/_header')%>
+    <div>
+        <h1>
+            <center>Add Photos to GALLERY</center>
+        </h1>
+        <hr>
+        <center>
+            <!-- <p>Kindly give us your valuable feedack.</p> -->
+        </center>
+    </div>
+    <form action="/addGallery_save" method="POST">
+    <center>
+        <div class="fb-box">
+            <br><br> <br>
+            <label>Add Image URL :  </label><input type="text" id="imageURL" name="imageURL"><br><br>
+        <button class="raise">Submit URL</button><br><br><br>
+    </center>
+    <br><br>
+    <%- include('admin/admininclude/_footer')%>
+</body>
+
+</html>

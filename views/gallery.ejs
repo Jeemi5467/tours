@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/main.css">
+  <title>Tours</title>
+</head>
+
+<body>
+  <%- include('include/_header')%>
+    <!-- Header -->
+    <div class="text-box">
+      <h1 class="heading-primary">
+        <center><span class="heading-primary-main">PHOTO GALLERY</span></center>
+      </h1>
+    </div>
+    <!-- Photo Grid -->
+<div>
+  
+    <%for(let i=0; i < gallery.length; i++) { %>
+     
+          <div>
+          <% var gal=gallery[i].imageURL %>
+            <center><img src="<%= gal %>" style="height: 30%; width:70%; border:solid 2px #2d5696;"></center>
+          </div>
+      
+          <% } %>
+        </div>
+            
+       
+    
+   
+        <hr>
+        <%- include('include/_footer')%>
+</body>
+
+</html>
+  
