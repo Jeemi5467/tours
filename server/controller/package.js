@@ -40,3 +40,16 @@ exports.findpackage = (req, res) => {
         })
 }
 
+exports.deleteOne = async (req, res) => {
+
+    console.log(req.params.id);
+    await Package.findByIdAndRemove(req.params.id)
+        .then(user => {
+            //res.send(user)
+            res.redirect('/adminpackage');
+        })
+        .catch(err => {
+            res.status(500).send({ message: err.message || "Error Occured" })
+        })
+}
+

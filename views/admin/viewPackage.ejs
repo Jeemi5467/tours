@@ -27,16 +27,18 @@
                             <center><img src="<%= pac %>"  style="height:250px;width: 250px" class="pics picpackage"></center>
                         </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <div class="menudetails" >
-                                    <h1><%= package[i].package_name %></h1>
+                                    <div><h1><%= package[i].package_name %></h1>
+                                        <form action="/deletePkg/<%= package[i].id %>"" method="POST">
+                                        <button class="deleteBtn">Delete Package</button>
+                                    </form></div>
                                     <h3><%= package[i].package_type %></h3>
-                                    <p><%= package[i].package_des %></p>
+                                        <p><%= package[i].package_des %></p>
                                     
-                                     
                                     <% var price = package[i].package_price %>
                                     <p><i class="fa fa-rupee" style="font-size:20px"></i>&nbsp;<%= price %></p>                                 
                             </div>
+                            
                         </div>
-                        
                         <div style="height:5%"></div>
                         <% } %>
             </div>

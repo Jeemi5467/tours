@@ -16,6 +16,7 @@ route.get('/',services.homeRoutes);
 route.get('/admin',services.adminRoutes)
 route.get('/package',services.packageRoutes);
 route.get('/contactus',services.contactusRoutes);
+route.post('/deletePkg/:id',package_controller.deleteOne);
 route.get('/gallery',gallery_controller.find);
 route.get('/feedback',services.feedbackRoutes);
 route.post('/feedback_save',feedback_controller.feedback_create);
@@ -30,6 +31,6 @@ route.get('/addGallery',services.addGalleryRoutes);
 route.post('/addPackage_save',package_controller.package_create);
 route.post('/addGallery_save',gallery_controller.gallery_create);
 route.get('/view_feedback_admin',services.admin_feedbackRoutes);
-// route.get('/package_find',package_controller.findpackage);
+
 
 module.exports=route;
