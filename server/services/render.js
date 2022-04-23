@@ -4,7 +4,7 @@ var Gallery = require("../model/gallery_model");
 
 exports.homeRoutes=(req,res)=>
 {
-    axios.get('http://localhost:8081/feedback_find')
+    axios.get('https://toursinter.herokuapp.com/feedback_find')
     .then(function(response){ 
         res.render('index1',{feedback:response.data});
     })
@@ -29,7 +29,7 @@ exports.adminpackageRoutes= async(req,res)=>
 
 exports.galleryRoutes=async(req,res)=>
 {
-    axios.get('http://localhost:8081/gallery_find')
+    axios.get('https://toursinter.herokuapp.com/gallery_find')
     .then(function(response){ 
         res.render('gallery',{feedback:response.data});
     })
@@ -43,7 +43,7 @@ exports.galleryRoutes=async(req,res)=>
 
 exports.adminRoutes=(req,res)=>
 {
-    axios.get('http://localhost:8081/feedback_find')
+    axios.get('https://toursinter.herokuapp.com/feedback_find')
     .then(function(response){ 
         res.render('./admin/adminindex',{feedback:response.data});
     })
@@ -54,7 +54,7 @@ exports.adminRoutes=(req,res)=>
 
 exports.admin_feedbackRoutes=(req,res)=>
 {
-    axios.get('http://localhost:8081/feedback_find')
+    axios.get('https://toursinter.herokuapp.com/feedback_find')
     .then(function(response){ 
         res.render('./admin/view_feedback',{feedback:response.data});
     })
@@ -65,7 +65,7 @@ exports.admin_feedbackRoutes=(req,res)=>
 
 exports.admin_viewPackageRoutes=(req,res)=>
 {
-    axios.get('http://localhost:8081/package')
+    axios.get('https://toursinter.herokuapp.com/package')
     .then(function(response){ 
         res.render('./admin/viewPackage',{package:response.data});
     })
